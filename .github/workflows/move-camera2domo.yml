@@ -25,7 +25,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Move camera to domo
         env:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          USERNAME: ${{ vars.USERNAME }}
+          PASSWORD: ${{ vars.PASSWORD }}
         run: |
           ./move.sh -u $USERNAME -p $PASSWORD -l domo
