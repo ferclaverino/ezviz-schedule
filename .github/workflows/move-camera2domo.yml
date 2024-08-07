@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  move:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,4 +28,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          ./move.sh -u "$USERNAME" -p "$PASSWORD" -l domo
+          ./move.sh -u $USERNAME -p $PASSWORD -l domo
