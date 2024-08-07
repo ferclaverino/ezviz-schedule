@@ -24,4 +24,5 @@ echo "pass: $p";
 echo "location: $location";
 echo "x: $x";
 
-pyezviz -u $u -p $p -r apiisa.ezvizlife.com camera --serial L32853854 move_coords --x $x --y 0
+# pyezviz -u $u -p $p -r apiisa.ezvizlife.com camera --serial L32853854 move_coords --x $x --y 0
+pyezviz -u $u -p $p camera --serial L32853854 move_coords --x $x --y 0
